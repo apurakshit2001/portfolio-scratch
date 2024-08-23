@@ -1,0 +1,118 @@
+/* Acknowledgement.css */
+.acknowledgement-container {
+    font-family: 'Roboto', sans-serif;
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 90%;
+    background-color: #f9f9f924;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    color: #333;
+    
+}
+
+.acknowledgement-heading {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.acknowledgement-description {
+    font-size: 1rem;
+    color: #afafaf;
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.acknowledgement-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.acknowledgement-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.acknowledgement-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.acknowledgement-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.acknowledgement-item p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .acknowledgement-container {
+        max-width: 80%;
+        padding: 60px 40px;
+    }
+
+    .acknowledgement-heading {
+        font-size: 2.5rem;
+    }
+
+    .acknowledgement-description {
+        font-size: 1.125rem;
+        margin-bottom: 40px;
+    }
+
+    .acknowledgement-item h3 {
+        font-size: 1.75rem;
+    }
+
+    .acknowledgement-item p {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .acknowledgement-container {
+        max-width: 70%;
+        padding: 80px 60px;
+    }
+
+    .acknowledgement-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .acknowledgement-item {
+        width: calc(50% - 15px);
+    }
+
+    .acknowledgement-heading {
+        font-size: 3rem;
+    }
+
+    .acknowledgement-description {
+        font-size: 1.25rem;
+    }
+
+    .acknowledgement-item h3 {
+        font-size: 2rem;
+    }
+
+    .acknowledgement-item p {
+        font-size: 1.125rem;
+    }
+}

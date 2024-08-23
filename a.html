@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome-style Slider Menu</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .navbar-container {
+            display: grid;
+            grid-template-columns: auto;
+            width: 0; /* Initially hide the navbar */
+            transition: width 0.5s ease; /* Smooth transition */
+            background-color: #333;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            overflow: hidden;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar-container.expanded {
+            width: 250px; /* Expand the navbar */
+        }
+
+        .nav-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            height: 100%;
+            background-color: #333;
+        }
+
+        .nav-links {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-links:hover {
+            background-color: #555;
+        }
+
+        .toggle-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1100;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease;
+        }
+
+        .toggle-button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar-container">
+        <ul class="nav-content">
+            <a href="#" class="nav-links">
+                <li class="link-text">Home</li>
+            </a>
+            <a href="#" class="nav-links">
+                <li class="link-text">About</li>
+            </a>
+            <a href="#" class="nav-links">
+                <li class="link-text">Other Works</li>
+            </a>
+            <a href="#" class="nav-links">
+                <li class="link-text">Contacts</li>
+            </a>
+            <a href="#" class="nav-links">
+                <li class="link-text">Acknowledgement</li>
+            </a>
+        </ul>
+    </nav>
+
+    <button id="toggleButton" class="toggle-button">☰</button>
+
+    <script>
+        document.getElementById('toggleButton').addEventListener('click', function () {
+            document.querySelector('.navbar-container').classList.toggle('expanded');
+        });
+    </script>
+</body>
+
+</html>
